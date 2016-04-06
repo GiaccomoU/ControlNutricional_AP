@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 
@@ -17,6 +18,10 @@ public class Pantalla_Registro extends AppCompatActivity {
     Spinner spinnerEdad;
     Spinner spinnerPeso;
     Spinner spinnerAltura;
+    Spinner spinnerSexo;
+    EditText editTextNombre;
+    EditText editTextCorreo;
+    EditText edit
 
 
     @Override
@@ -48,15 +53,19 @@ public class Pantalla_Registro extends AppCompatActivity {
         for(int i=130; i<231; i++){
             itemsAltura.add(i);
         }
-        ArrayAdapter<Integer> adaptadorAltura = new ArrayAdapter<Integer>(this, android.R.layout.simple_spinner_item, itemsEdad);
+        ArrayAdapter<Integer> adaptadorAltura = new ArrayAdapter<Integer>(this, android.R.layout.simple_spinner_item, itemsAltura);
         spinnerAltura.setAdapter(adaptadorAltura);
-
-
+        spinnerSexo = (Spinner) findViewById(R.id.spinnerSexo);
+        ArrayList<String> itemsSexo = new ArrayList<String>();
+        itemsSexo.add("M");
+        itemsSexo.add("F");
+        ArrayAdapter<String> adaptadorSexo = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, itemsSexo);
+        spinnerAltura.setAdapter(adaptadorSexo);
 
     }
 
     public void registrarPersona(View v){
-        String pNombre =
+        //String pNombre =
 
     }
 

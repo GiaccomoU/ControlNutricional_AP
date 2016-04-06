@@ -84,32 +84,6 @@
         android:layout_alignTop="@+id/textView20"
         android:layout_toEndOf="@+id/spinnerEdad" />
 
-    <RadioGroup
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_toEndOf="@+id/textView21"
-        android:layout_marginTop="315dp">
-
-        <RadioButton
-            android:layout_width="50dp"
-            android:layout_height="30dp"
-            android:text="F"
-            android:id="@+id/radioButton2"
-            android:layout_alignTop="@+id/radioButton"
-            android:layout_toEndOf="@+id/radioButton" />
-
-        <RadioButton
-            android:layout_width="50dp"
-            android:layout_height="30dp"
-            android:text="M"
-            android:id="@+id/radioButton"
-            android:layout_alignTop="@+id/radioButton2"
-            android:layout_toEndOf="@+id/radioButton2"
-            android:layout_marginLeft="5dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="0dp" />
-    </RadioGroup>
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -206,5 +180,12 @@
         android:layout_alignStart="@+id/editTextCorreo"
         android:layout_marginTop="25dp"
         android:hint="Escribe tu nombre" />
+
+    <Spinner
+        android:layout_width="55dp"
+        android:layout_height="35dp"
+        android:id="@+id/spinnerSexo"
+        android:layout_alignTop="@+id/spinnerEdad"
+        android:layout_toEndOf="@+id/textView21" />
 
 </RelativeLayout>
