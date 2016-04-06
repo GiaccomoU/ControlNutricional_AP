@@ -21,13 +21,18 @@ public class Pantalla_Registro extends AppCompatActivity {
     Spinner spinnerSexo;
     EditText editTextNombre;
     EditText editTextCorreo;
-    //EditText edit
-
+    EditText editTextContrasenia;
+    EditText editTextContrasenia2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla__registro);
+
+        editTextNombre = (EditText) findViewById(R.id.editTextNombre);
+        editTextContrasenia = (EditText) findViewById(R.id.editTextContrasenia);
+        editTextContrasenia2 = (EditText) findViewById(R.id.editTextContrasenia2);
+        editTextCorreo = (EditText) findViewById(R.id.editTextCorreo);
 
         spinnerEdad = (Spinner) findViewById(R.id.spinnerEdad);
         Integer[] itemsEdad = new Integer[]{10,11,12,13,14,15,16,17,18,19,
