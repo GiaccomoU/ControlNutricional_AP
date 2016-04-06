@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ControlNutricional</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="title_activity_pantalla__inicio">Pantalla_Inicio</string>
+
+    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="title_activity_pantalla__registro">Pantalla_Registro</string>
+    <string name="server_client_id">"868475977692-92a8cnpsktgupnriqg57kr63dkg4vp08.apps.googleusercontent.com"</string>
+    <string name="title_activity_pantalla__principal">Pantalla_Principal</string>
+    <string name="title_activity_pantalla__agregar__alimento">Pantalla_Agregar_Alimento</string>
+    <string name="title_activity_pantalla__agregar__ejercicio">Pantalla_Agregar_Ejercicio</string>
+    <string name="title_activity_pantalla__crear__alimento">Pantalla_Crear_Alimento</string>
+    <string name="title_activity_pantalla__mi__perfil">Pantalla_Mi_Perfil</string>
+
+
+
+</resources>

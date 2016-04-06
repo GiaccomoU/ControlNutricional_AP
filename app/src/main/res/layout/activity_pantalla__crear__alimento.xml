@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.giaccomo.controlnutricional.Pantalla_Crear_Alimento">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/barra"
+        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:background="#85cf95"
+        android:visibility="visible" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/barra">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:background="#ffffff">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Nombre:"
+                android:id="@+id/textView12"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textColor="#81e2a6" />
+
+            <EditText
+                android:layout_width="230dp"
+                android:layout_height="30dp"
+                android:id="@+id/editText2"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/textView12"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Marca:"
+                android:id="@+id/textView13"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:textColor="#81e2a6"
+                android:layout_below="@+id/editText2"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp" />
+
+            <EditText
+                android:layout_width="245dp"
+                android:layout_height="30dp"
+                android:id="@+id/editText3"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="0dp"
+                android:layout_alignTop="@+id/textView13"
+                android:layout_toEndOf="@+id/textView13" />
+
+            <View
+                android:id="@+id/division1"
+                android:layout_width="400dp"
+                android:layout_height="2dp"
+                android:background="@drawable/barra_divisora"
+                android:layout_below="@+id/textView13"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Tamaño de la porción:"
+                android:id="@+id/textView14"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:textColor="#81e2a6"
+                android:layout_below="@+id/division1"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="30dp" />
+
+            <EditText
+                android:layout_width="105dp"
+                android:layout_height="30dp"
+                android:id="@+id/editText4"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="0dp"
+                android:layout_alignTop="@+id/textView14"
+                android:layout_toEndOf="@+id/textView14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Calorías:"
+                android:id="@+id/textView15"
+                android:textSize="20dp"
+                android:layout_marginLeft="90dp"
+                android:textStyle="bold"
+                android:textColor="#81e2a6"
+                android:layout_below="@+id/editText4"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="30dp" />
+
+            <EditText
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:id="@+id/editText5"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="0dp"
+                android:layout_alignTop="@+id/textView15"
+                android:layout_toEndOf="@+id/textView15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Carbohidratos:"
+                android:id="@+id/textView16"
+                android:textSize="20dp"
+                android:layout_marginLeft="35dp"
+                android:textStyle="bold"
+                android:textColor="#81e2a6"
+                android:layout_below="@+id/textView15"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:id="@+id/editText6"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="0dp"
+                android:layout_alignTop="@+id/textView16"
+                android:layout_toEndOf="@+id/textView16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Grasas:"
+                android:id="@+id/textView17"
+                android:textSize="20dp"
+                android:layout_marginLeft="100dp"
+                android:textStyle="bold"
+                android:textColor="#81e2a6"
+                android:layout_below="@+id/textView16"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:id="@+id/editText7"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="0dp"
+                android:layout_alignTop="@+id/textView17"
+                android:layout_toEndOf="@+id/textView17" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Proteínas:"
+                android:id="@+id/textView18"
+                android:textSize="20dp"
+                android:layout_marginLeft="75dp"
+                android:textStyle="bold"
+                android:textColor="#81e2a6"
+                android:layout_below="@+id/textView17"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:id="@+id/editText8"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="0dp"
+                android:layout_below="@+id/textView17"
+                android:layout_toEndOf="@+id/textView18" />
+
+            <Button
+                android:layout_width="280dp"
+                android:layout_height="60dp"
+                android:text="Crear"
+                android:id="@+id/button4"
+                android:layout_below="@+id/editText8"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="54dp"
+                android:layout_marginLeft="35dp"
+                android:background="#81E2A6"
+                android:textColor="#a5a9a3"
+                android:textStyle="bold"
+                android:textSize="25dp" />
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/navList"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|start"
+            android:background="#ffeeeeee"/>
+
+    </android.support.v4.widget.DrawerLayout>
+
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="*-*"
+        android:id="@+id/btnAbrirMenu"
+        android:onClick="sacarMenuLateral"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Crear alimento"
+        android:id="@+id/textView11"
+        android:layout_marginLeft="0dp"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_alignBottom="@+id/btnAbrirMenu"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

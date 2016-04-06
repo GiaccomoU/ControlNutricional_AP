@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Completa estos datos para terminar tu registro"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textSize="25dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editTextContrasenia"
+        android:textSize="17dp"
+        android:hint="Elige una contraseña"
+        android:layout_below="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginTop="100dp" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editTextContrasenia2"
+        android:textSize="17dp"
+        android:hint="Confirma la contraseña"
+        android:layout_below="@+id/editTextContrasenia"
+        android:layout_alignStart="@+id/editTextContrasenia"
+        android:layout_marginTop="5dp" />
+
+    <View
+        android:id="@+id/division1"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:background="@drawable/barra_divisora"
+        android:layout_below="@+id/editTextContrasenia2"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Edad:"
+        android:id="@+id/textView20"
+        android:singleLine="false"
+        android:layout_below="@+id/division1"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="20dp" />
+
+    <Spinner
+        android:layout_width="55dp"
+        android:layout_height="35dp"
+        android:id="@+id/spinnerEdad"
+        android:layout_below="@+id/division1"
+        android:layout_toEndOf="@+id/textView20"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Sexo:"
+        android:id="@+id/textView21"
+        android:singleLine="false"
+        android:layout_marginLeft="20dp"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/textView20"
+        android:layout_toEndOf="@+id/spinnerEdad" />
+
+    <RadioGroup
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_toEndOf="@+id/textView21"
+        android:layout_marginTop="315dp">
+
+        <RadioButton
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:text="F"
+            android:id="@+id/radioButton2"
+            android:layout_alignTop="@+id/radioButton"
+            android:layout_toEndOf="@+id/radioButton" />
+
+        <RadioButton
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:text="M"
+            android:id="@+id/radioButton"
+            android:layout_alignTop="@+id/radioButton2"
+            android:layout_toEndOf="@+id/radioButton2"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="0dp" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Peso:"
+        android:id="@+id/textView22"
+        android:singleLine="false"
+        android:layout_marginLeft="20dp"
+        android:textSize="20dp"
+        android:layout_below="@+id/textView20"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp" />
+
+    <Spinner
+        android:layout_width="65dp"
+        android:layout_height="35dp"
+        android:id="@+id/spinnerPeso"
+        android:layout_alignTop="@+id/textView22"
+        android:layout_toEndOf="@+id/textView22"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="-3dp"
+        android:layout_marginBottom="0dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="kg"
+        android:id="@+id/textView23"
+        android:singleLine="false"
+        android:layout_marginLeft="0dp"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/textView22"
+        android:layout_toEndOf="@+id/spinnerPeso" />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Altura:"
+        android:id="@+id/textView24"
+        android:singleLine="false"
+        android:layout_marginLeft="20dp"
+        android:textSize="20dp"
+        android:layout_below="@+id/spinnerPeso"
+        android:layout_marginTop="20dp" />
+
+    <Spinner
+        android:layout_width="65dp"
+        android:layout_height="35dp"
+        android:id="@+id/spinnerAltura"
+        android:layout_marginLeft="0dp"
+        android:layout_alignBottom="@+id/textView24"
+        android:layout_toEndOf="@+id/textView24" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="cm"
+        android:id="@+id/textView25"
+        android:singleLine="false"
+        android:layout_marginLeft="0dp"
+        android:textSize="20dp"
+        android:layout_below="@+id/spinnerPeso"
+        android:layout_toEndOf="@+id/spinnerAltura"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EMPEZAR"
+        android:id="@+id/button5"
+        android:layout_marginBottom="51dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView25" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editTextCorreo"
+        android:layout_below="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginTop="60dp"
+        android:hint="Escribe tu correo" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/editTextNombre"
+        android:layout_below="@+id/textView2"
+        android:layout_alignStart="@+id/editTextCorreo"
+        android:layout_marginTop="25dp"
+        android:hint="Escribe tu nombre" />
+
+</RelativeLayout>
