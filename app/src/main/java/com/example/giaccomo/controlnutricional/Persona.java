@@ -13,6 +13,8 @@ public class Persona {
     int peso;
     String nivelActFisica;
     ArrayList<Alimento> alimentosCreados;
+    int caloriasDiarias;
+    int TMB;
 
     public static ArrayList<Persona> BDPersonas = new ArrayList<Persona>();
     public static int idIncremental = 0;
@@ -29,6 +31,13 @@ public class Persona {
         this.estatura = pEstatura;
         this.peso = pPeso;
         this.nivelActFisica = pNivelActFisica;
+
+        /*if(pSexo == "F"){
+            this.TMB = 655 + ((96)*pPeso)
+        } else{
+            this.TMB =
+        }*/
+
     }
 
 

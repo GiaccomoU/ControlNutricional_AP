@@ -65,7 +65,7 @@
         android:textSize="20dp" />
 
     <Spinner
-        android:layout_width="55dp"
+        android:layout_width="70dp"
         android:layout_height="35dp"
         android:id="@+id/spinnerEdad"
         android:layout_below="@+id/division1"
@@ -132,7 +132,7 @@
         android:layout_alignEnd="@+id/editTextCorreo" />
 
     <Spinner
-        android:layout_width="65dp"
+        android:layout_width="85dp"
         android:layout_height="35dp"
         android:id="@+id/spinnerAltura"
         android:layout_marginLeft="0dp"

@@ -56,7 +56,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_toEndOf="@+id/textView12"
                 android:layout_marginTop="10dp"
-                android:textColor="#81e2a6"
+                android:textColor="#FFFFFF"
                 android:background="#81e2a6" />
 
             <TextView
@@ -79,7 +79,7 @@
                 android:id="@+id/editTextMarcaAlimento"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="0dp"
-                android:textColor="#81e2a6"
+                android:textColor="#FFFFFF"
                 android:background="#81e2a6"
                 android:layout_below="@+id/editTextNombreAlimento"
                 android:layout_alignStart="@+id/textView18"
@@ -138,7 +138,7 @@
                 android:id="@+id/editTextCalorias"
                 android:layout_marginLeft="0dp"
                 android:layout_marginRight="0dp"
-                android:textColor="#81e2a6"
+                android:textColor="#FFFFFF"
                 android:layout_alignTop="@+id/textView15"
                 android:layout_alignStart="@+id/editTextCarbohidratos"
                 android:layout_marginBottom="10dp"
@@ -166,7 +166,7 @@
                 android:layout_marginRight="0dp"
                 android:layout_alignTop="@+id/textView16"
                 android:layout_toEndOf="@+id/textView16"
-                android:textColor="#81e2a6"
+                android:textColor="#FFFFFF"
                 android:background="#81e2a6" />
 
             <TextView
@@ -191,7 +191,7 @@
                 android:layout_marginRight="0dp"
                 android:layout_alignTop="@+id/textView17"
                 android:layout_toEndOf="@+id/textView17"
-                android:textColor="#81e2a6"
+                android:textColor="#FFFFFF"
                 android:background="#81e2a6" />
 
             <TextView
@@ -214,7 +214,7 @@
                 android:id="@+id/editTextProteinas"
                 android:layout_marginLeft="0dp"
                 android:layout_marginRight="0dp"
-                android:textColor="#81e2a6"
+                android:textColor="#FFFFFF"
                 android:layout_alignTop="@+id/textView18"
                 android:layout_alignStart="@+id/editTextCarbohidratos"
                 android:background="#81e2a6" />
