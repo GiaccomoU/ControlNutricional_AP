@@ -21,7 +21,7 @@ public class Pantalla_Registro extends AppCompatActivity {
     Spinner spinnerSexo;
     EditText editTextNombre;
     EditText editTextCorreo;
-    EditText edit
+    //EditText edit
 
 
     @Override
