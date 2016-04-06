@@ -1,5 +1,6 @@
 package com.example.giaccomo.controlnutricional;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 
 import java.util.ArrayList;
@@ -19,6 +21,7 @@ public class Pantalla_Registro extends AppCompatActivity {
     Spinner spinnerPeso;
     Spinner spinnerAltura;
     Spinner spinnerSexo;
+    Spinner spinnerActFisica;
     EditText editTextNombre;
     EditText editTextCorreo;
     EditText editTextContrasenia;
@@ -46,6 +49,7 @@ public class Pantalla_Registro extends AppCompatActivity {
                                             90,91,92,93,94,95,96,97,98,99};
         ArrayAdapter<Integer> adaptadorEdad = new ArrayAdapter<Integer>(this, android.R.layout.simple_spinner_item, itemsEdad);
         spinnerEdad.setAdapter(adaptadorEdad);
+
         spinnerPeso = (Spinner) findViewById(R.id.spinnerPeso);
         ArrayList<Integer> itemsPeso = new ArrayList<Integer>();
         for(int i=20; i<201; i++){
@@ -53,6 +57,7 @@ public class Pantalla_Registro extends AppCompatActivity {
         }
         ArrayAdapter<Integer> adaptadorPeso = new ArrayAdapter<Integer>(this, android.R.layout.simple_spinner_item, itemsPeso);
         spinnerPeso.setAdapter(adaptadorPeso);
+
         spinnerAltura = (Spinner) findViewById(R.id.spinnerAltura);
         ArrayList<Integer> itemsAltura = new ArrayList<Integer>();
         for(int i=130; i<231; i++){
@@ -60,17 +65,41 @@ public class Pantalla_Registro extends AppCompatActivity {
         }
         ArrayAdapter<Integer> adaptadorAltura = new ArrayAdapter<Integer>(this, android.R.layout.simple_spinner_item, itemsAltura);
         spinnerAltura.setAdapter(adaptadorAltura);
+
         spinnerSexo = (Spinner) findViewById(R.id.spinnerSexo);
         ArrayList<String> itemsSexo = new ArrayList<String>();
         itemsSexo.add("M");
         itemsSexo.add("F");
         ArrayAdapter<String> adaptadorSexo = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, itemsSexo);
-        spinnerAltura.setAdapter(adaptadorSexo);
+        spinnerSexo.setAdapter(adaptadorSexo);
+
+        spinnerActFisica = (Spinner) findViewById(R.id.spinnerActFisica);
+        ArrayList<String> itemsAF = new ArrayList<String>();
+        itemsAF.add("Sedentario");
+        itemsAF.add("Ligera");
+        itemsAF.add("Moderada");
+        itemsAF.add("Intensa");
+        itemsAF.add("Muy Intensa");
+        ArrayAdapter<String> adaptadorAF = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, itemsAF);
+        spinnerActFisica.setAdapter(adaptadorAF);
 
     }
 
     public void registrarPersona(View v){
-        //String pNombre =
+        String pNombre = editTextNombre.getText().toString();
+        String pCorreo = editTextCorreo.getText().toString();
+        String pContrasenia = editTextContrasenia.getText().toString();
+        String pContrasenia2 = editTextContrasenia2.getText().toString();
+        String pSexo = spinnerSexo.getSelectedItem().toString();
+        String pNivelActFisica = spinnerActFisica.getSelectedItem().toString();
+        int pEdad = Integer.parseInt(spinnerEdad.getSelectedItem().toString());
+        int pAltura = Integer.parseInt(spinnerAltura.getSelectedItem().toString());
+        int pPeso = Integer.parseInt(spinnerPeso.getSelectedItem().toString());
+        Persona nuevaPersona = new Persona(pNombre,pCorreo,pContrasenia, pEdad,pSexo, pAltura, pPeso,pNivelActFisica);
+        Persona.BDPersonas.add(nuevaPersona);
+        Intent intent = new Intent(this, Pantalla_Principal.class);
+        System.out.println("LO HICE");
+        startActivity(intent);
 
     }
 

@@ -128,8 +128,8 @@
         android:singleLine="false"
         android:layout_marginLeft="20dp"
         android:textSize="20dp"
-        android:layout_below="@+id/spinnerPeso"
-        android:layout_marginTop="20dp" />
+        android:layout_alignBottom="@+id/spinnerPeso"
+        android:layout_alignEnd="@+id/editTextCorreo" />
 
     <Spinner
         android:layout_width="65dp"
@@ -148,18 +148,18 @@
         android:singleLine="false"
         android:layout_marginLeft="0dp"
         android:textSize="20dp"
-        android:layout_below="@+id/spinnerPeso"
-        android:layout_toEndOf="@+id/spinnerAltura"
-        android:layout_marginTop="20dp" />
+        android:layout_alignBottom="@+id/spinnerPeso"
+        android:layout_toEndOf="@+id/spinnerAltura" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="EMPEZAR"
         android:id="@+id/button5"
-        android:layout_marginBottom="51dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/textView25" />
+        android:layout_below="@+id/spinnerActFisica"
+        android:layout_alignEnd="@+id/textView24"
+        android:layout_marginTop="15dp"
+        android:onClick="registrarPersona" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -187,5 +187,27 @@
         android:id="@+id/spinnerSexo"
         android:layout_alignTop="@+id/spinnerEdad"
         android:layout_toEndOf="@+id/textView21" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nivel de Actividad Física:"
+        android:id="@+id/textView26"
+        android:singleLine="false"
+        android:layout_marginLeft="20dp"
+        android:textSize="20dp"
+        android:layout_below="@+id/spinnerPeso"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <Spinner
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:id="@+id/spinnerActFisica"
+        android:layout_below="@+id/textView26"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="5dp" />
 
 </RelativeLayout>
