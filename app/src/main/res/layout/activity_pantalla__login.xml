@@ -15,10 +15,10 @@
         android:ems="10"
         android:id="@+id/TxtFldCorreo"
         android:textIsSelectable="true"
-        android:text="Ingresa tu email de google"
-        android:textColor="#6c6c6c"
+        android:textColor="#4e4e4e"
         android:layout_above="@+id/TxtFldContrasenia"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:hint="Ingresa tu email" />
 
     <EditText
         android:layout_width="290dp"
@@ -40,7 +40,8 @@
         android:background="#5f9171"
         android:textColor="#ffffff"
         android:textSize="20dp"
-        android:text="@string/iniciar_sesion" />
+        android:text="@string/iniciar_sesion"
+        android:onClick="login" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -51,7 +52,7 @@
         android:layout_below="@+id/button"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:onClick="login" />
+        android:onClick="registrarse" />
 
 
 

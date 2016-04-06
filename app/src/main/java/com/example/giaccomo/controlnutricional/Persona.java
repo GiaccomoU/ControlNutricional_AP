@@ -11,12 +11,16 @@ public class Persona {
     String sexo;
     int estatura;
     int peso;
-    int idActividadFisica;
-    public static ArrayList<Persona> BDPersonas = new ArrayList<Persona>();
+    String nivelActFisica;
+    ArrayList<Alimento> alimentosCreados;
 
-    public Persona(int pIdPersona, String pNombre, String pCorreo, String pContrasenia, int pEdad,
-                   String pSexo, int pEstatura, int pPeso, int pIdActividadFisica){
-        this.idPersona = pIdPersona;
+    public static ArrayList<Persona> BDPersonas = new ArrayList<Persona>();
+    public static int idIncremental = 0;
+    public static int ultimoIDLogueado;
+
+    public Persona(String pNombre, String pCorreo, String pContrasenia, int pEdad,
+                   String pSexo, int pEstatura, int pPeso, String pNivelActFisica){
+        this.idPersona = idIncremental++;
         this.nombre = pNombre;
         this.correo = pCorreo;
         this.contrasenia = pContrasenia;
@@ -24,7 +28,7 @@ public class Persona {
         this.sexo = pSexo;
         this.estatura = pEstatura;
         this.peso = pPeso;
-        this.idActividadFisica = pIdActividadFisica;
+        this.nivelActFisica = pNivelActFisica;
     }
 
 

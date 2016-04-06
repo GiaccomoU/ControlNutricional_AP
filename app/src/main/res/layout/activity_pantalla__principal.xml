@@ -35,13 +35,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="18 de Febrero, 2016"
+                android:text="06 de Marzo, 2016"
                 android:textSize="24sp"
                 android:gravity="center"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
-                android:id="@+id/textView3" />
+                android:id="@+id/textView3"
+                android:textColor="#b5b5b5" />
 
             <View
                 android:id="@+id/division1"
@@ -62,7 +63,8 @@
                 android:layout_alignParentStart="true"
                 android:textSize="22dp"
                 android:layout_marginTop="18dp"
-                android:layout_marginLeft="5dp" />
+                android:layout_marginLeft="5dp"
+                android:textColor="#999999" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -87,7 +89,8 @@
                 android:layout_alignParentStart="true"
                 android:textSize="22dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginLeft="5dp" />
+                android:layout_marginLeft="5dp"
+                android:textColor="#bcbcbc" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -119,7 +122,8 @@
                 android:id="@+id/button2"
                 android:layout_below="@+id/division2"
                 android:layout_alignParentStart="true"
-                android:layout_marginTop="5dp" />
+                android:layout_marginTop="5dp"
+                android:onClick="crearAlimento" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -130,7 +134,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_below="@+id/division2"
                 android:layout_toEndOf="@+id/button2"
-                android:layout_marginTop="20dp" />
+                android:layout_marginTop="20dp"
+                android:textColor="#96b59a" />
 
             <Button
                 style="?android:attr/buttonStyleSmall"
@@ -150,7 +155,8 @@
                 android:layout_marginLeft="0dp"
                 android:layout_below="@+id/button2"
                 android:layout_alignStart="@+id/textView8"
-                android:layout_marginTop="15dp" />
+                android:layout_marginTop="15dp"
+                android:textColor="#96b59a" />
 
             <View
                 android:id="@+id/division3"
@@ -165,13 +171,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Has tomado X vasos de agua"
+                android:text="Has tomado 3 vasos de agua"
                 android:id="@+id/textView10"
                 android:textSize="20dp"
                 android:layout_marginLeft="50dp"
                 android:layout_below="@+id/division3"
                 android:layout_alignStart="@+id/textView6"
-                android:layout_marginTop="25dp" />
+                android:layout_marginTop="25dp"
+                android:textColor="#96b59a" />
 
         </RelativeLayout>
 
@@ -185,12 +192,28 @@
     </android.support.v4.widget.DrawerLayout>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="*-*"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:id="@+id/btnAbrirMenu"
         android:onClick="sacarMenuLateral"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:background="#ffffff"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Inicio"
+        android:id="@+id/textView19"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/btnAbrirMenu"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="85dp" />
 
 </RelativeLayout>

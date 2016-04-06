@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -29,6 +30,14 @@ public class Pantalla_Crear_Alimento extends AppCompatActivity {
     private ActionBar myActionBar;
     private Button btnAbrirMenu;
 
+    private EditText editTextNombreAlimento;
+    private EditText editTextMarca;
+    private EditText editTextTamanioPorcion;
+    private EditText editTextCalorias;
+    private EditText editTextCarbohidratos;
+    private EditText editTextGrasas;
+    private EditText editTextProteinas;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +49,14 @@ public class Pantalla_Crear_Alimento extends AppCompatActivity {
         btnAbrirMenu = (Button)findViewById(R.id.btnAbrirMenu);
 
         addDrawerItems();
+
+        editTextNombreAlimento = (EditText) findViewById(R.id.editTextNombreAlimento);
+        editTextMarca = (EditText) findViewById(R.id.editTextMarcaAlimento);
+        editTextTamanioPorcion = (EditText) findViewById(R.id.editTextTamanioPorcion);
+        editTextCalorias = (EditText) findViewById(R.id.editTextCalorias);
+        editTextCarbohidratos = (EditText) findViewById(R.id.editTextCarbohidratos);
+        editTextGrasas = (EditText) findViewById(R.id.editTextGrasas);
+        editTextProteinas = (EditText) findViewById(R.id.editTextProteinas);
     }
 
     public void sacarMenuLateral(View v){
@@ -51,7 +68,7 @@ public class Pantalla_Crear_Alimento extends AppCompatActivity {
     }
 
     private void addDrawerItems() {
-        String[] osArray = { "Inicio", "Mi Perfil", "Registrar Alimento", "Cerrar Sesión" };
+        String[] osArray = { "Inicio", "Registrar Alimento", "Cerrar Sesión" };
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
         mDrawerList.setAdapter(mAdapter);
 
@@ -93,10 +110,6 @@ public class Pantalla_Crear_Alimento extends AppCompatActivity {
                 intent = new Intent(this, Pantalla_Principal.class);
                 startActivity(intent);
                 break;
-            case 1:
-                intent = new Intent(this, Pantalla_Mi_Perfil.class);
-                startActivity(intent);
-                break;
             case 2:
                 break;
             case 3:
@@ -104,5 +117,19 @@ public class Pantalla_Crear_Alimento extends AppCompatActivity {
                 startActivity(intent);
                 break;
         }
+    }
+
+    public void crearAlimento(View v){
+        String pNombre = editTextNombreAlimento.getText().toString();
+        String pMarca = editTextMarca.getText().toString();
+        int pPorcion = Integer.parseInt(editTextTamanioPorcion.getText().toString());
+        int pCalorias = Integer.parseInt(editTextCalorias.getText().toString());
+        int pCarbohidratos = Integer.parseInt(editTextCarbohidratos.getText().toString());
+        int pGrasas = Integer.parseInt(editTextGrasas.getText().toString());
+        int pProteinas = Integer.parseInt(editTextProteinas.getText().toString());
+
+        Alimento nuevoAlimento = new Alimento(pNombre, pMarca, pPorcion, pCalorias, pCarbohidratos, pGrasas, pProteinas);
+        Persona.BDPersonas.get(Persona.ultimoIDLogueado).alimentosCreados.add(nuevoAlimento);
+        Intent intent = new Intent(this, Pantalla_Agregar_Alimento.class);
     }
 }

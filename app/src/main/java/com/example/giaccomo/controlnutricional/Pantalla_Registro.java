@@ -98,7 +98,7 @@ public class Pantalla_Registro extends AppCompatActivity {
         Persona nuevaPersona = new Persona(pNombre,pCorreo,pContrasenia, pEdad,pSexo, pAltura, pPeso,pNivelActFisica);
         Persona.BDPersonas.add(nuevaPersona);
         Intent intent = new Intent(this, Pantalla_Principal.class);
-        System.out.println("LO HICE");
+        //System.out.println("IDDDDD: " + nuevaPersona.idPersona);
         startActivity(intent);
 
     }

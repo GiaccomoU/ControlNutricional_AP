@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
+
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.Api;
@@ -21,122 +23,38 @@ import java.util.concurrent.TimeUnit;
 
 public class Pantalla_Login extends AppCompatActivity {
 
-    private GoogleSignInOptions OpcionesDeGoogle;
-    public GoogleApiClient Cliente;
-
+    EditText password;
+    EditText correo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla__login);
 
-        EditText password = (EditText) findViewById(R.id.TxtFldContrasenia);
+        password = (EditText) findViewById(R.id.TxtFldContrasenia);
         password.setTypeface(Typeface.DEFAULT);
         password.setTransformationMethod(new PasswordTransformationMethod());
 
-        OpcionesDeGoogle = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.server_client_id))
-                .requestEmail()
-                .requestProfile()
-                .build();
-
-        Cliente = new GoogleApiClient() {
-            @Override
-            public boolean hasConnectedApi(Api<?> api) {
-                return false;
-            }
-
-            @Override
-            public ConnectionResult getConnectionResult(Api<?> api) {
-                return null;
-            }
-
-            @Override
-            public void connect() {
-
-            }
-
-            @Override
-            public ConnectionResult blockingConnect() {
-                return null;
-            }
-
-            @Override
-            public ConnectionResult blockingConnect(long l, TimeUnit timeUnit) {
-                return null;
-            }
-
-            @Override
-            public void disconnect() {
-
-            }
-
-            @Override
-            public void reconnect() {
-
-            }
-
-            @Override
-            public PendingResult<Status> clearDefaultAccountAndReconnect() {
-                return null;
-            }
-
-            @Override
-            public void stopAutoManage(FragmentActivity fragmentActivity) {
-
-            }
-
-            @Override
-            public boolean isConnected() {
-                return false;
-            }
-
-            @Override
-            public boolean isConnecting() {
-                return false;
-            }
-
-            @Override
-            public void registerConnectionCallbacks(ConnectionCallbacks connectionCallbacks) {
-
-            }
-
-            @Override
-            public boolean isConnectionCallbacksRegistered(ConnectionCallbacks connectionCallbacks) {
-                return false;
-            }
-
-            @Override
-            public void unregisterConnectionCallbacks(ConnectionCallbacks connectionCallbacks) {
-
-            }
-
-            @Override
-            public void registerConnectionFailedListener(OnConnectionFailedListener onConnectionFailedListener) {
-
-            }
-
-            @Override
-            public boolean isConnectionFailedListenerRegistered(OnConnectionFailedListener onConnectionFailedListener) {
-                return false;
-            }
-
-            @Override
-            public void unregisterConnectionFailedListener(OnConnectionFailedListener onConnectionFailedListener) {
-
-            }
-
-            @Override
-            public void dump(String s, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strings) {
-
-            }
-        };
-
-
+        correo = (EditText) findViewById(R.id.TxtFldCorreo);
 
     }
 
     public void login(View v){
+       /* for(int i=0; i<Persona.BDPersonas.size(); i++){
+            if(Persona.BDPersonas.get(i).correo == correo.getText().toString()){
+                if(Persona.BDPersonas.get(i).contrasenia == password.getText().toString()){*/
+                    //Persona.ultimoIDLogueado = Persona.BDPersonas.get(i).idPersona;
+                    Intent intent = new Intent(this, Pantalla_Principal.class);
+                    startActivity(intent);
+               /* }else{
+                    Toast.makeText(Pantalla_Login.this, "Datos incorrectos1", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }
+        Toast.makeText(Pantalla_Login.this, "Datos incorrectos2", Toast.LENGTH_SHORT).show();*/
+    }
+
+    public void registrarse(View v){
         Intent intent = new Intent(this, Pantalla_Registro.class);
         startActivity(intent);
     }

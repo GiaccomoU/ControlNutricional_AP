@@ -34,24 +34,21 @@
             android:paddingBottom="@dimen/activity_vertical_margin"
             android:background="#ffffff">
 
-            <EditText
-                android:layout_width="320dp"
-                android:layout_height="40dp"
-                android:id="@+id/editText"
-                android:layout_marginLeft="0dp"
-                android:background="#eae9e9"
-                android:hint="Buscar alimento..."
-                android:paddingLeft="10dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true" />
-
             <ListView
-                android:layout_width="400dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="390dp"
+                android:id="@+id/listaAlimentos"
                 android:layout_alignParentStart="true"
-                android:layout_marginTop="15dp"></ListView>
+                android:layout_alignParentTop="true" />
 
+            <Button
+                android:layout_width="350dp"
+                android:layout_height="80dp"
+                android:text="Crear alimento"
+                android:id="@+id/button6"
+                android:layout_below="@+id/listaAlimentos"
+                android:layout_alignParentStart="true"
+                android:textSize="20dp" />
         </RelativeLayout>
 
         <ListView
@@ -66,13 +63,13 @@
     <Button
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:text="*-*"
         android:id="@+id/btnAbrirMenu"
         android:onClick="sacarMenuLateral"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="20dp"
+        android:background="#FFFFFF" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -80,11 +77,11 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Agregar alimento"
         android:id="@+id/textView11"
-        android:layout_marginLeft="0dp"
+        android:layout_marginLeft="15dp"
         android:textSize="30dp"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
-        android:layout_alignBottom="@+id/btnAbrirMenu"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignTop="@+id/btnAbrirMenu"
+        android:layout_toEndOf="@+id/btnAbrirMenu" />
 
 </RelativeLayout>

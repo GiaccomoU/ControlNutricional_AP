@@ -1,5 +1,6 @@
 package com.example.giaccomo.controlnutricional;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -18,12 +19,16 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 
 public class Pantalla_Agregar_Alimento extends AppCompatActivity {
 
     private ListView mDrawerList;
+    private ListView listaAlimentos;
     private DrawerLayout mDrawerLayout;
     private ArrayAdapter<String> mAdapter;
+    private ArrayAdapter<String> AdaptadorAlimentos;
     private ActionBarDrawerToggle mDrawerToggle;
     private String mActivityTitle;
     private ActionBar myActionBar;
@@ -33,6 +38,8 @@ public class Pantalla_Agregar_Alimento extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla__agregar__alimento);
+
+        listaAlimentos = (ListView) findViewById(R.id.listaAlimentos);
 
         mDrawerList = (ListView)findViewById(R.id.navList);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -62,6 +69,20 @@ public class Pantalla_Agregar_Alimento extends AppCompatActivity {
                 Toast.makeText(Pantalla_Agregar_Alimento.this, "Time for an upgrade!", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void llenarLista(){
+        ArrayList<String> array = new ArrayList<String>();
+        for(Alimento i: Persona.BDPersonas.get(Persona.ultimoIDLogueado).alimentosCreados){
+            array.add(i.nombre);
+        }
+        AdaptadorAlimentos = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, array);
+        listaAlimentos.setAdapter(AdaptadorAlimentos);
+    }
+
+    public void crearAlimento(View v){
+        Intent intent = new Intent(this, Pantalla_Crear_Alimento.class);
+        startActivity(intent);
     }
 
 }

@@ -49,13 +49,15 @@
 
             <EditText
                 android:layout_width="230dp"
-                android:layout_height="30dp"
-                android:id="@+id/editText2"
+                android:layout_height="40dp"
+                android:id="@+id/editTextNombreAlimento"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="0dp"
                 android:layout_alignParentTop="true"
                 android:layout_toEndOf="@+id/textView12"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
+                android:textColor="#81e2a6"
+                android:background="#81e2a6" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -67,18 +69,21 @@
                 android:layout_marginLeft="10dp"
                 android:textStyle="bold"
                 android:textColor="#81e2a6"
-                android:layout_below="@+id/editText2"
+                android:layout_below="@+id/editTextNombreAlimento"
                 android:layout_alignParentStart="true"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="15dp" />
 
             <EditText
                 android:layout_width="245dp"
-                android:layout_height="30dp"
-                android:id="@+id/editText3"
+                android:layout_height="40dp"
+                android:id="@+id/editTextMarcaAlimento"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="0dp"
-                android:layout_alignTop="@+id/textView13"
-                android:layout_toEndOf="@+id/textView13" />
+                android:textColor="#81e2a6"
+                android:background="#81e2a6"
+                android:layout_below="@+id/editTextNombreAlimento"
+                android:layout_alignStart="@+id/textView18"
+                android:layout_marginTop="10dp" />
 
             <View
                 android:id="@+id/division1"
@@ -106,11 +111,12 @@
             <EditText
                 android:layout_width="105dp"
                 android:layout_height="30dp"
-                android:id="@+id/editText4"
+                android:id="@+id/editTextTamanioPorcion"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="0dp"
                 android:layout_alignTop="@+id/textView14"
-                android:layout_toEndOf="@+id/textView14" />
+                android:layout_toEndOf="@+id/textView14"
+                android:background="#81e2a6" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -122,18 +128,21 @@
                 android:layout_marginLeft="90dp"
                 android:textStyle="bold"
                 android:textColor="#81e2a6"
-                android:layout_below="@+id/editText4"
+                android:layout_below="@+id/editTextTamanioPorcion"
                 android:layout_alignParentStart="true"
-                android:layout_marginTop="30dp" />
+                android:layout_marginTop="25dp" />
 
             <EditText
                 android:layout_width="70dp"
-                android:layout_height="30dp"
-                android:id="@+id/editText5"
-                android:layout_marginLeft="5dp"
+                android:layout_height="35dp"
+                android:id="@+id/editTextCalorias"
+                android:layout_marginLeft="0dp"
                 android:layout_marginRight="0dp"
+                android:textColor="#81e2a6"
                 android:layout_alignTop="@+id/textView15"
-                android:layout_toEndOf="@+id/textView15" />
+                android:layout_alignStart="@+id/editTextCarbohidratos"
+                android:layout_marginBottom="10dp"
+                android:background="#81e2a6" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -146,16 +155,19 @@
                 android:textStyle="bold"
                 android:textColor="#81e2a6"
                 android:layout_below="@+id/textView15"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp" />
 
             <EditText
                 android:layout_width="70dp"
-                android:layout_height="30dp"
-                android:id="@+id/editText6"
+                android:layout_height="35dp"
+                android:id="@+id/editTextCarbohidratos"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="0dp"
                 android:layout_alignTop="@+id/textView16"
-                android:layout_toEndOf="@+id/textView16" />
+                android:layout_toEndOf="@+id/textView16"
+                android:textColor="#81e2a6"
+                android:background="#81e2a6" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -168,16 +180,19 @@
                 android:textStyle="bold"
                 android:textColor="#81e2a6"
                 android:layout_below="@+id/textView16"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp" />
 
             <EditText
                 android:layout_width="70dp"
-                android:layout_height="30dp"
-                android:id="@+id/editText7"
+                android:layout_height="35dp"
+                android:id="@+id/editTextGrasas"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="0dp"
                 android:layout_alignTop="@+id/textView17"
-                android:layout_toEndOf="@+id/textView17" />
+                android:layout_toEndOf="@+id/textView17"
+                android:textColor="#81e2a6"
+                android:background="#81e2a6" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -190,30 +205,34 @@
                 android:textStyle="bold"
                 android:textColor="#81e2a6"
                 android:layout_below="@+id/textView17"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp" />
 
             <EditText
                 android:layout_width="70dp"
-                android:layout_height="30dp"
-                android:id="@+id/editText8"
-                android:layout_marginLeft="5dp"
+                android:layout_height="35dp"
+                android:id="@+id/editTextProteinas"
+                android:layout_marginLeft="0dp"
                 android:layout_marginRight="0dp"
-                android:layout_below="@+id/textView17"
-                android:layout_toEndOf="@+id/textView18" />
+                android:textColor="#81e2a6"
+                android:layout_alignTop="@+id/textView18"
+                android:layout_alignStart="@+id/editTextCarbohidratos"
+                android:background="#81e2a6" />
 
             <Button
                 android:layout_width="280dp"
                 android:layout_height="60dp"
                 android:text="Crear"
                 android:id="@+id/button4"
-                android:layout_below="@+id/editText8"
+                android:layout_below="@+id/editTextProteinas"
                 android:layout_alignParentStart="true"
-                android:layout_marginTop="54dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginLeft="35dp"
                 android:background="#81E2A6"
-                android:textColor="#a5a9a3"
+                android:textColor="#FFFFFF"
                 android:textStyle="bold"
-                android:textSize="25dp" />
+                android:textSize="25dp"
+                android:onClick="crearAlimento" />
 
         </RelativeLayout>
 
@@ -229,13 +248,13 @@
     <Button
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:text="*-*"
         android:id="@+id/btnAbrirMenu"
         android:onClick="sacarMenuLateral"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="15dp"
+        android:background="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"

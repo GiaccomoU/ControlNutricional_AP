@@ -13,9 +13,11 @@ public class Alimento {
     int proteinas;
     int calorias;
 
-    public Alimento(int pIdAlimento, String pNombre, String pMarca, int pTamanioPorcion,
+    public static int idAlimentoIncremental = 0;
+
+    public Alimento(String pNombre, String pMarca, int pTamanioPorcion,
                     int pGrasas, int pCarbohidratos, int pProteinas, int pCalorias){
-        this.idAlimento = pIdAlimento;
+        this.idAlimento = idAlimentoIncremental++;
         this.nombre = pNombre;
         this.marca = pMarca;
         this.tamanioPorcion = pTamanioPorcion;

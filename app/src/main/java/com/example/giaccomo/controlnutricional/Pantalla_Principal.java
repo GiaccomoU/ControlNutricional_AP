@@ -53,14 +53,14 @@ public class Pantalla_Principal extends AppCompatActivity {
     }
 
     private void addDrawerItems() {
-        String[] osArray = { "Inicio", "Mi Perfil", "Registrar Alimento", "Cerrar Sesión" };
+        String[] osArray = { "Inicio", "Registrar Alimento", "Cerrar Sesión" };
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
         mDrawerList.setAdapter(mAdapter);
 
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(Pantalla_Principal.this, "Time for an upgrade!", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(Pantalla_Principal.this, "Time for an upgrade!", Toast.LENGTH_SHORT).show();
                 selectItem(position);
             }
         });
@@ -94,18 +94,24 @@ public class Pantalla_Principal extends AppCompatActivity {
             case 0:
                 break;
             case 1:
-                intent = new Intent(this, Pantalla_Mi_Perfil.class);
-                startActivity(intent);
-                break;
-            case 2:
                 intent = new Intent(this, Pantalla_Crear_Alimento.class);
                 startActivity(intent);
                 break;
-            case 3:
+            case 2:
                 intent = new Intent(this, Pantalla_Login.class);
                 startActivity(intent);
                 break;
         }
     }
+
+    public void agregarAlimento(View v){
+        Intent intent = new Intent(this, Pantalla_Agregar_Alimento.class);
+        startActivity(intent);
+    }
+    public void agregarEjercicio(View v){
+        Intent intent = new Intent(this, Pantalla_Agregar_Ejercicio.class);
+        startActivity(intent);
+    }
+
 
 }
