@@ -22,7 +22,7 @@ public class Pantalla_Registro extends AppCompatActivity {
     Spinner spinnerAltura;
     Spinner spinnerSexo;
     Spinner spinnerActFisica;
-    EditText editTextNombre;
+    EditText ETNombre;
     EditText editTextCorreo;
     EditText editTextContrasenia;
     EditText editTextContrasenia2;
@@ -32,7 +32,8 @@ public class Pantalla_Registro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla__registro);
 
-        editTextNombre = (EditText) findViewById(R.id.editTextNombre);
+        //editTextNombre = (EditText) findViewById(R.id.editTextNombre);
+        ETNombre = (EditText)findViewById(R.id.editTextNombre);
         editTextContrasenia = (EditText) findViewById(R.id.editTextContrasenia);
         editTextContrasenia2 = (EditText) findViewById(R.id.editTextContrasenia2);
         editTextCorreo = (EditText) findViewById(R.id.editTextCorreo);
@@ -86,7 +87,7 @@ public class Pantalla_Registro extends AppCompatActivity {
     }
 
     public void registrarPersona(View v){
-        String pNombre = editTextNombre.getText().toString();
+        String pNombre = ETNombre.getText().toString();
         String pCorreo = editTextCorreo.getText().toString();
         String pContrasenia = editTextContrasenia.getText().toString();
         String pContrasenia2 = editTextContrasenia2.getText().toString();

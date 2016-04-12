@@ -131,5 +131,6 @@ public class Pantalla_Crear_Alimento extends AppCompatActivity {
         Alimento nuevoAlimento = new Alimento(pNombre, pMarca, pPorcion, pCalorias, pCarbohidratos, pGrasas, pProteinas);
         Persona.BDPersonas.get(Persona.ultimoIDLogueado).alimentosCreados.add(nuevoAlimento);
         Intent intent = new Intent(this, Pantalla_Agregar_Alimento.class);
+        startActivity(intent);
     }
 }

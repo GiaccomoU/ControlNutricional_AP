@@ -104,7 +104,7 @@ public class Pantalla_Principal extends AppCompatActivity {
         }
     }
 
-    public void agregarAlimento(View v){
+    public void irAAgregarAlimento(View v){
         Intent intent = new Intent(this, Pantalla_Agregar_Alimento.class);
         startActivity(intent);
     }
