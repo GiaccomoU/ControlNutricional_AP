@@ -56,7 +56,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Calorías restantes:"
                 android:id="@+id/textView4"
                 android:layout_below="@+id/division1"
@@ -69,7 +68,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="1253"
                 android:id="@+id/textView5"
                 android:layout_below="@+id/textView4"
@@ -82,7 +80,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Calorías consumidas:"
                 android:id="@+id/textView6"
                 android:layout_below="@+id/textView5"
@@ -95,7 +92,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="477"
                 android:id="@+id/textView7"
                 android:layout_below="@+id/textView6"
@@ -115,7 +111,6 @@
                 android:layout_marginTop="10dp" />
 
             <Button
-                style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+"
@@ -123,12 +118,11 @@
                 android:layout_below="@+id/division2"
                 android:layout_alignParentStart="true"
                 android:layout_marginTop="5dp"
-                android:onClick="crearAlimento" />
+                android:onClick="irAAgregarAlimento" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Agregar alimento"
                 android:id="@+id/textView8"
                 android:layout_marginLeft="10dp"
@@ -138,7 +132,6 @@
                 android:textColor="#96b59a" />
 
             <Button
-                style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+"
@@ -149,7 +142,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Agregar ejercicio"
                 android:id="@+id/textView9"
                 android:layout_marginLeft="0dp"
@@ -170,7 +162,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Has tomado 3 vasos de agua"
                 android:id="@+id/textView10"
                 android:textSize="20dp"
@@ -205,7 +196,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Inicio"
         android:id="@+id/textView19"
         android:textSize="40dp"
